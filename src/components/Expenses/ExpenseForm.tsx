@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { X, Save, Upload } from 'lucide-react';
+import { X, Save, Mic } from 'lucide-react';
 import { ExpenseCategory, Expense } from '../../types';
 import { generateId } from '../../utils/helpers';
 import { useLocalStorage } from '../../hooks/useLocalStorage';
@@ -145,7 +145,7 @@ export function ExpenseForm({ onClose, onSave, expense }: ExpenseFormProps) {
               />
             </div>
             <button type="button" onClick={() => listeningField === 'title' ? stopListening() : startListening('title')} className={`glass-button p-2 ${listeningField === 'title' ? 'bg-primary-500 text-white' : ''}`} title="Voice input for title">
-              <Upload size={18} />
+              <Mic size={18} />
             </button>
           </div>
 
@@ -169,7 +169,7 @@ export function ExpenseForm({ onClose, onSave, expense }: ExpenseFormProps) {
                 </div>
               </div>
               <button type="button" onClick={() => listeningField === 'amount' ? stopListening() : startListening('amount')} className={`glass-button p-2 ${listeningField === 'amount' ? 'bg-primary-500 text-white' : ''}`} title="Voice input for amount">
-                <Upload size={18} />
+                <Mic size={18} />
               </button>
             </div>
             <div>
@@ -187,7 +187,7 @@ export function ExpenseForm({ onClose, onSave, expense }: ExpenseFormProps) {
                   ))}
                 </select>
                 <button type="button" onClick={() => listeningField === 'category' ? stopListening() : startListening('category')} className={`glass-button p-2 ${listeningField === 'category' ? 'bg-primary-500 text-white' : ''}`} title="Voice input for category">
-                  <Upload size={18} />
+                  <Mic size={18} />
                 </button>
               </div>
             </div>
@@ -206,7 +206,7 @@ export function ExpenseForm({ onClose, onSave, expense }: ExpenseFormProps) {
               />
             </div>
             <button type="button" onClick={() => listeningField === 'date' ? stopListening() : startListening('date')} className={`glass-button p-2 ${listeningField === 'date' ? 'bg-primary-500 text-white' : ''}`} title="Voice input for date">
-              <Upload size={18} />
+              <Mic size={18} />
             </button>
           </div>
 
@@ -223,7 +223,7 @@ export function ExpenseForm({ onClose, onSave, expense }: ExpenseFormProps) {
               />
             </div>
             <button type="button" onClick={() => listeningField === 'description' ? stopListening() : startListening('description')} className={`glass-button p-2 ${listeningField === 'description' ? 'bg-primary-500 text-white' : ''}`} title="Voice input for description">
-              <Upload size={18} />
+              <Mic size={18} />
             </button>
           </div>
 
@@ -240,7 +240,7 @@ export function ExpenseForm({ onClose, onSave, expense }: ExpenseFormProps) {
               />
             </div>
             <button type="button" onClick={() => listeningField === 'tags' ? stopListening() : startListening('tags')} className={`glass-button p-2 ${listeningField === 'tags' ? 'bg-primary-500 text-white' : ''}`} title="Voice input for tags">
-              <Upload size={18} />
+              <Mic size={18} />
             </button>
           </div>
 
