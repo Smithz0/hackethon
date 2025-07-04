@@ -3,7 +3,7 @@ import { Plus, Users, Upload, Calculator } from 'lucide-react';
 
 interface QuickActionsProps {
   onAddExpense: () => void;
-  onAddGroup: () => void;
+  onAddGroup?: () => void;
 }
 
 export function QuickActions({ onAddExpense, onAddGroup }: QuickActionsProps) {
@@ -14,12 +14,12 @@ export function QuickActions({ onAddExpense, onAddGroup }: QuickActionsProps) {
       color: 'bg-primary-500',
       onClick: onAddExpense,
     },
-    {
+    ...(onAddGroup ? [{
       icon: Users,
       label: 'Create Group',
       color: 'bg-secondary-500',
       onClick: onAddGroup,
-    },
+    }] : []),
     {
       icon: Upload,
       label: 'Scan Receipt',

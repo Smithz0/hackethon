@@ -15,7 +15,7 @@ import { useState } from 'react';
 
 interface DashboardProps {
   onAddExpense: () => void;
-  onAddGroup: () => void;
+  onAddGroup?: () => void;
 }
 
 export function Dashboard({ onAddExpense, onAddGroup }: DashboardProps) {
