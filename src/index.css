@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-white/10;
+  }
+  body {
+    @apply bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800;
+    @apply text-slate-900 dark:text-slate-100;
+    @apply transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply backdrop-blur-xl bg-white/10 dark:bg-white/5 border border-white/20 dark:border-white/10 rounded-xl shadow-xl;
+  }
+  
+  .glass-button {
+    @apply backdrop-blur-md bg-white/20 dark:bg-white/10 border border-white/30 dark:border-white/20 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200 hover:bg-white/30 dark:hover:bg-white/20 hover:scale-105 active:scale-95;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent;
+  }
+  
+  .floating-card {
+    @apply glass-card hover:shadow-2xl hover:scale-105 transition-all duration-300 hover:bg-white/20 dark:hover:bg-white/10;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-400/50 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-500/70;
+}
+
+/* Smooth transitions */
+* {
+  @apply transition-colors duration-200;
+}
+
+:root {
+  --color-text-default: #333333;
+  --color-text-positive: #10B981;
+  --color-text-negative: #EF4444;
+  --color-text-settled: #9CA3AF;
+  --color-text-heading: #111827;
+  --color-text-accent: #2563EB;
+}
+
+body {
+  color: var(--color-text-default);
+}
+
+.text-default {
+  color: var(--color-text-default) !important;
+}
+.text-positive {
+  color: var(--color-text-positive) !important;
+}
+.text-negative {
+  color: var(--color-text-negative) !important;
+}
+.text-settled {
+  color: var(--color-text-settled) !important;
+}
+.text-heading {
+  color: var(--color-text-heading) !important;
+}
+.text-accent {
+  color: var(--color-text-accent) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text-heading);
+}
